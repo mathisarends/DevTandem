@@ -1,17 +1,11 @@
-from flask import Flask, render_template, request
+from flask import Flask, request
 
 app = Flask(__name__)
 
 # GET-Route
 @app.route('/', methods=['GET'])
 def get_route():
-    #return 'GET Route: Hello, World!'
-    name = "Mathis"
-    age = 21
-    return render_template('index.html', 
-                           name=name,
-                           age=age,
-                           ) #Nutzung von Template im HTML-Template
+    return 'GET Route: Hello, World!'
 
 # POST-Route
 @app.route('/', methods=['POST'])
